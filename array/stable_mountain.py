@@ -1,5 +1,7 @@
 
-#https://leetcode.com/problems/find-indices-of-stable-mountains/
+
+# Question URL
+# https://leetcode.com/problems/find-indices-of-stable-mountains/
 
 class Solution(object):
     def stableMountains(self, height, threshold):

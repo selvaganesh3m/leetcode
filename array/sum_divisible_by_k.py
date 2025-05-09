@@ -1,6 +1,7 @@
 
 
-#https://leetcode.com/problems/minimum-operations-to-make-array-sum-divisible-by-k/description/
+# Question URL
+# https://leetcode.com/problems/minimum-operations-to-make-array-sum-divisible-by-k/description/
 
 class Solution(object):
     def minOperations(self, nums, k):
