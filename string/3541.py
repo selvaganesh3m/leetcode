@@ -1,37 +1,19 @@
-
-
-
 #https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/description/
+
+from collections import Counter
 
 s = "successes"
 
-vowels = "aeiou"
-consnants = ""
-
-
-for i in range(97, 123):
-    val = chr(i)
-    if val not in vowels:
-        consnants += val
-
-char_count = {}
-
-for char in s:
-    if char in char_count:
-        char_count[char] += 1
-    else:
-        char_count[char] = 1
-
+vowels = {'a', 'e', 'i', 'o', 'u'}
+char_count = Counter(s)
 vowel_count = 0
 consonant_count = 0
 
 for key, value in char_count.items():
-    if key in vowels:
-        if vowel_count < char_count[key]:
-            vowel_count = char_count[key]
-    if key in consnants:
-        if consonant_count < char_count[key]:
-            consonant_count = char_count[key]
+    if key not in vowels:
+           consonant_count = max(consonant_count, value)
+    else:
+          vowel_count = max(vowel_count, value)
 
 print(vowel_count + consonant_count)
 
