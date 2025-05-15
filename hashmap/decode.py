@@ -13,6 +13,7 @@ message = "zwx hnfx lqantp mnoeius ycgk vcnjrdb"
 key = key.replace(" ", "")
 main_dict = {}
 counter = 0
+output = ""
 
 
 for i in range(0, len(key)): #97, 123
@@ -21,12 +22,10 @@ for i in range(0, len(key)): #97, 123
     else:
         counter -= 1
 
-output = ""
-
-for i in message:
-    if i == " ":
-        output += i
+for letter in message:
+    if letter == " ":
+        output += letter
     else:
-        output += main_dict[i]
+        output += main_dict[letter]
 
 print(output)
